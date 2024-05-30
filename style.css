@@ -1,0 +1,144 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+
+
+/* CUSTOM PROPERTIES */
+
+:root {
+
+    --clr-primary-800: hsl(218, 44%, 22%);
+    --clr-primary-400: hsl(220, 15%, 55%);
+    --clr-primary-200: hsl(212, 45%, 89%);
+    --clr-primary-100: hsl(0, 0%, 100%);
+
+    --ff-text-400: "Outfit", sans-serif;
+
+}
+
+
+
+
+
+/* CUSTOM STYLING */
+
+body {   
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary-200);
+}
+
+.grid-flow {
+    display: grid;
+    gap: 1rem;
+}
+
+.qr-card {
+    padding: 1rem 1rem 2rem;
+    max-width: 320px;
+    margin: 1rem;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--ff-text-400);
+    font-weight: 400;
+    color: var(--clr-primary-400);
+    background-color: var(--clr-primary-100);
+    border-radius: 1.4rem;
+    box-shadow: 0 1rem 4rem 0 rgba(0, 0, 0, .13);
+}
+
+.qr-card__qr-code {
+    border-radius: .7rem;
+    margin-inline: auto;
+}
+
+.qr-card__content {
+    padding: .5rem;
+}
+
+.qr-card__title {
+    font-size: 1.4rem;
+    line-height: 1.3em;
+    font-weight: 700;
+    color: var(--clr-primary-800);
+}
+
+.qr-card__text  {
+    line-height: 1.3em;
+}
