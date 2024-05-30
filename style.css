@@ -108,7 +108,7 @@ body {
 
 .grid-flow {
     display: grid;
-    gap: 1rem;
+    gap: .8rem;
 }
 
 .qr-card {
